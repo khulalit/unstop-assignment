@@ -1,0 +1,41 @@
+.drawer-wrapper{
+    position: absolute;
+    width: 100dvw;
+    height: 120dvh;
+    background-color:  rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+}
+.drawer{
+    /* max-width: 100px; */
+    box-sizing: border-box;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+     /* Start offscreen */
+    animation: slideLeft 0.4s forwards;
+    transition: width 0.4s;
+    overflow: hidden;
+}
+.drawer-overlay{
+    /* display: none; */
+    visibility: hidden;
+    animation: 0s delayShowUp 0.4s forwards;
+}
+
+@keyframes delayShowUp {
+    to{
+        visibility: visible;
+    }
+}
+@keyframes slideLeft {
+    
+    to {
+       /* Slide up to show bottom sheet */
+      width: 80%; /* Adjust the height as needed */
+      padding: 30px;
+    }
+}

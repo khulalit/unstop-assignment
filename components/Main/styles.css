@@ -1,0 +1,48 @@
+.container::-webkit-scrollbar{
+    width: 0px; /* Width of the scrollbar */
+}
+.card-container::-webkit-scrollbar{
+    width: 0px;
+}
+  
+.container::-webkit-scrollbar-thumb, .card-container::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.2); /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+    border: 6px solid white;
+}
+.card-container{
+    overflow-x: auto;
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    gap: 30px;
+}
+.container::-webkit-scrollbar-track {
+    background-color: transparent; /* Background color of the track */
+}
+.container{
+    border-radius: 12px;
+}
+.options{
+    display: none;
+}
+
+@media (max-width: 680px) {
+    .container{
+        border-radius: 0;
+    }
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .main-container{
+        margin-top: 50px;
+    }
+    .options{
+        display: flex;
+        gap: 24px;
+    }
+}
+
+  

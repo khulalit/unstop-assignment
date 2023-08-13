@@ -1,0 +1,5 @@
+@media (min-width: 680px) {
+    .top-bar{
+        display: none;
+    }
+}

@@ -1,0 +1,62 @@
+.bottomsheet-wrapper{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color:  rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+}
+.bottomsheet{
+    min-width: 600px;
+    height: 0dvh;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    margin-left: 50%;
+    transform: translate(-50%);
+    border-top-left-radius:12px ;
+    border-top-right-radius: 12px;
+     /* Start offscreen */
+    animation: slideUp 0.4s forwards;
+    overflow-y: auto;
+}
+.bottomsheet-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1C4980;
+    border-bottom: 1px solid #DADCE0;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: 100%;
+}
+.bottomsheet-body{
+    /* margin-top: 4px; */
+    padding: 20px 30px;
+    color: #1C4980;
+}
+.bottomsheet-footer{
+    position: sticky;
+    bottom: 0;
+    padding-inline: 30px;
+    padding-block: 10px;
+    box-shadow: 2px 0px 2px black;
+    background-color: white;
+}
+@keyframes slideUp {
+    to {
+       /* Slide up to show bottom sheet */
+      height: 90dvh; /* Adjust the height as needed */
+    }
+  }
+@media (max-width: 680px){
+    .bottomsheet{
+        min-width : 100%;
+    }
+}

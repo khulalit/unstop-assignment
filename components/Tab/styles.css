@@ -1,0 +1,23 @@
+.tab-li {
+    position: relative;
+}
+.tab-li::after{
+    content: '';
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    display: inline-block;
+    height: 2px;
+    width: calc(100% - 20px);
+    
+    background-color: #0073E6;
+}
+
+@media (max-width: 680px) {
+    .tabs{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+}

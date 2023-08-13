@@ -1,0 +1,17 @@
+.card{
+    min-width: 400px;
+}
+.column-details{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+@media (max-width: 680px) {
+    .column-details{
+        flex-direction: row;
+    }
+    .card{
+        min-width: 100%;
+    }
+}

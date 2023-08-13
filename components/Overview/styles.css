@@ -1,0 +1,79 @@
+.overview{
+    font-size: 18px;
+    display: grid;
+    font-family: Inter;
+    grid-template-areas: 
+    'total-assesment candidates candidate-sources total-purpose'
+    ;
+    height: 0;
+    color: #1C4980;
+    border: 2px solid #DADCE0;
+    border-radius: 12px;
+    animation: slideFromMid 0.5s forwards;
+    overflow: hidden;
+
+}
+.overview > div{
+    font-size: 0.79em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 19.6px */
+    padding-inline: 1.1em;
+    padding-block: 0.8em;
+    /* flex: 1; */
+}
+.total-assesment{
+    grid-area: total-assesment;
+    flex: 1;
+}
+.candidates{
+    grid-area: candidates;
+    flex : 2;
+}
+.candidate-sources{
+    grid-area: candidate-sources;
+    flex: 2;
+}
+.total-purpose{
+    grid-area: total-purpose;
+    flex: 1;
+}
+
+@media (max-width: 680px) {
+    .overview{
+        grid-template-areas: 
+        'total-assesment total-purpose'
+        'candidates candidates'
+        'candidate-sources candidate-sources'
+        ;
+        margin-top: 50px;
+        font-size: 16;
+    }
+    .overview > div{
+        padding-inline: 0.8em;
+        padding-block: 0.555em;
+    }
+    .candidate-sources{
+        border: none;
+        border-top: 2px solid #DADCE0;
+    }
+    .candidates{
+        border: none;
+        border-top: 2px solid #DADCE0;
+    }
+    
+}
+
+@keyframes delayShowUp {
+    to{
+        visibility: visible;
+    }
+}
+@keyframes slideFromMid {
+    
+    to {
+       /* Slide up to show bottom sheet */
+        height: auto;
+        padding: 0;
+    }
+}
