@@ -1,7 +1,6 @@
 .overview{
     font-size: 18px;
     display: grid;
-    font-family: Inter;
     grid-template-areas: 
     'total-assesment candidates candidate-sources total-purpose'
     ;
