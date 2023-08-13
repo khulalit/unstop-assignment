@@ -4,7 +4,7 @@ import CrossIcon from '@/assets/cross.svg'
 import Image from 'next/image'
 import AssesmentFrom from '../AssesmentForm'
 
-export default function Bottomsheet({setOpen}:any) {
+export default function Bottomsheet({setOpen, children, title, footerButtonTitle}:any) {
     function handleOnclick(e:any){
         if(e.target.className === "bottomsheet-wrapper")
             setOpen(false)
@@ -18,17 +18,17 @@ export default function Bottomsheet({setOpen}:any) {
             <div className='bottomsheet'>
                 <div className='bottomsheet-header'>
                     <span className='title'>
-                        {'Create New Assessment'}
+                        {title}
                     </span>
                     <button onClick={handleCloseclick}>
                         <Image src={CrossIcon} alt='icon'/>
                     </button>
                 </div>
                 <div className='bottomsheet-body'>
-                    <AssesmentFrom onSave={()=>setOpen(false)}/>
+                    {children}
                 </div>
                 <div className='bottomsheet-footer'>
-                    <button className="px-4 w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-600" type="submit">Next</button>
+                    <button className="px-4 w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-600" type="submit">{footerButtonTitle}</button>
                 </div>
             </div>
         </div>

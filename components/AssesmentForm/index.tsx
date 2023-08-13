@@ -3,7 +3,7 @@ import React,{useState, useRef} from 'react'
 import CrossIcon from '@/assets/cross.svg'
 import Image from 'next/image';
 
-export default function AssesmentFrom({onSave}:any) {
+export default function AssesmentFrom() {
     const ref = useRef<any>(null);
     const [skills, setSkills] = useState<string[]>([]);
     function keyDownCaptureHandler(){

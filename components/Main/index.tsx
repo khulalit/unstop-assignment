@@ -13,6 +13,7 @@ import SearchIcon from '@/assets/search.svg'
 
 import './styles.css'
 import useWindowDimensions from '@/hooks/useWindowDimensions'
+import AssesmentFrom from '../AssesmentForm'
 
 
 export default function Main() {
@@ -57,7 +58,9 @@ export default function Main() {
                 <AssesmentCard/>
             </div>
         </div>
-        {isOpen && <Bottomsheet setOpen={setIsOpen}/>}
+        {isOpen && <Bottomsheet setOpen={setIsOpen} title={(width && width < 680) ? 'Sub-Section Details': 'Create New Assesment'} footerButtonTitle={(width && width < 680) ? 'Next': 'Save'}>
+            <AssesmentFrom/>
+        </Bottomsheet>}
 
         {sideMenuOpen && <DrawerSide styleClasses={''} setOpen={setSideMenuOpen}/>}
         
